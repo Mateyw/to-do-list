@@ -2,15 +2,15 @@ import '/src/styles/style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('projectsBtn').addEventListener('click', () => {
-        window.location.href = '/dist/projects.html';
+        window.location.href = 'projects.html';
     });
 
     document.getElementById('toDosBtn').addEventListener('click', () => {
-        window.location.href = '/dist/toDos.html';
+        window.location.href = 'toDos.html';
     });
 
     document.getElementById('categoriesBtn').addEventListener('click', () => {
-        window.location.href = '/dist/categories.html';
+        window.location.href = 'categories.html';
     });
 });
 
