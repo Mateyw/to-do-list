@@ -57,7 +57,7 @@ module.exports = {
       filename: 'index.html',
       chunks: ['index'],
       title: 'To-do',
-      template: 'src/index-template.hbs',
+      template: 'src/tabs/index/index-template.hbs',
       minify: false
     }),
     new HtmlWebpackPlugin({
