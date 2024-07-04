@@ -1,4 +1,6 @@
 import '/src/styles/style.css';
+import Menu from '/src/components/renderMenu.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('projectsBtn').addEventListener('click', () => {
@@ -14,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+const menu = new Menu();
+menu.renderMenu();
 
 
 

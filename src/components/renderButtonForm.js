@@ -28,6 +28,7 @@ class ButtonForm {
                                     <input type="checkbox" id="projectStatus">
                                 </div>
                                 <button id="submit">Submit</button>
+                                <i class="fa-solid fa-x" id="closeFormBtn"></i>
                             </form>`;
 
                     bodyEl.appendChild(projectButtonFormEl);
@@ -35,6 +36,7 @@ class ButtonForm {
 
                     projectSubmitBtnEl.addEventListener('click', (event) => {
                         event.preventDefault();
+                        
 
                         
                     });
@@ -70,6 +72,7 @@ class ButtonForm {
                                     <input type="checkbox" id="toDoStatus">
                                 </div>
                                 <button id="submit">Submit</button>
+                                <i class="fa-solid fa-x" id="closeFormBtn"></i>
                             </form>`;
                     bodyEl.appendChild(toDoButtonFormEl);
                     const toDoSubmitBtnEl = document.getElementById('submit');
@@ -90,6 +93,7 @@ class ButtonForm {
                                     <input type="text" id="categoryName">
                                 </div>
                                 <button id="submit">Submit</button>
+                                <i class="fa-solid fa-x" id="closeFormBtn"></i>
                             </form>`;
                     bodyEl.appendChild(categoryButtonFormEl);
                     const categorySubmitBtnEl = document.getElementById('submit');

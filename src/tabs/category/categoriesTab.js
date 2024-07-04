@@ -1,6 +1,8 @@
 import '/src/styles/category.css';
 import Categories from '/src/components/renderCategories.js';
 import ButtonForm from '/src/components/renderButtonForm.js';
+import Menu from '/src/components/renderMenu.js';
+import Form from '/src/components/closeForm.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const categoriesMenu = new Categories();
-categoriesMenu.renderMenu();
+const menu = new Menu();
+menu.renderMenu();
 
 const categoriesStructure = new Categories();
 categoriesStructure.renderStructure();
@@ -31,3 +33,6 @@ categoriesButton.renderNewCategoryButton();
 
 const categoriesButtonForm = new ButtonForm();
 categoriesButtonForm.renderForm('addCategoryBtn');
+
+const form = new Form();
+form.close();

@@ -160,11 +160,22 @@ body {
     border-bottom: 1px solid var(--main-color);
 }
 
+#content>.container>.item:last-child{
+    border-bottom: none;
+}
+
+#content>.container>.item:last-child:hover{
+    border-bottom: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 #content>.container>#todoHeaderRow{
     border: none;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     font-weight: 600;
     z-index: 600;
+    border-radius: 5px;
 }
 
 #content>.container>#todoHeaderRow:hover{
@@ -180,6 +191,7 @@ body {
     background-color: var(--secondary-color-darker);
     cursor: pointer;
     z-index: 400;
+
 }
 
 #content>.container>.item>.checkboxDiv>.fa-regular.fa-circle {
@@ -316,5 +328,23 @@ body {
 }
 
 #formDiv>#form>#submit:active{
+    transform: scale(0.96);
+}
+
+#formDiv>#form>#closeFormBtn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: var(--checkbox-checked-color);
+    z-index: 1300;
+    font-size: 10px;
+}
+
+#formDiv>#form>#closeFormBtn:hover{
+    cursor: pointer;
+    color: var(--checkbox-checked-color-darker);
+}
+
+#formDiv>#form>#closeFormBtn:active{
     transform: scale(0.96);
 }
