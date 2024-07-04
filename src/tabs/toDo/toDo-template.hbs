@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{htmlWebpackPlugin.options.description}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+</head>
+
+<body>
+    <div id="menu">
+        <div class="dashboard">
+            <p id="dash">Dashboard</p>
+        </div>
+        <div class="projects">
+            <button id="projectsBtn"><i class="fa-solid fa-list"></i>Projects</button>
+        </div>
+        <div class="toDos">
+            <button id="toDosBtn"><i class="fa-solid fa-check"></i>To-Do's</button>
+        </div>
+        <div class="categories">
+            <button id="categoriesBtn"><i class="fa-solid fa-hashtag"></i>Categories</button>
+        </div>
+    </div>
+    <div id="content">
+        <div class="titleDiv">
+            <p class="title">To-Do's</p>
+        </div>
+        <div class="container">
+            <div id="todoHeaderRow">
+                <div id="todoHeaderName">To Do</div>
+                <div id="todoHeaderDesc">Description</div>
+                <div id="todoHeaderDueDate">Due Date</div>
+                <div id="todoHeaderPriority">Priority</div>
+                <div id="todoHeaderStatus">Status</div>
+            </div>
+            <div class="item" id="#">
+                <div class="itemTitle">To Do 1</div>
+                <div class="itemDesc">Blabla</div>
+                <div class="dueDate">
+                    <input type="date" name="Due Date" class="due">
+                </div>
+                <div class="priority">
+                    <select name="priority" class="priorityDropdown">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="checkboxDiv">
+                    <i class="fa-solid fa-circle-check"></i>
+                    {{!-- <i class="fa-regular fa-circle"></i> --}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="newToDoDiv">
+        {{!-- render button in renderToDos.js --}}
+    </div>
+
+</body>
+
+</html>

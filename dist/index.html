@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <script src="/dist/index.bundle.js" defer="true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To-do</title>
+<script defer src="index.bundle.js"></script></head>
+<body>
+    <div id="menu">
+        <div class="dashboard">
+            <p id="dash">Dashboard</p>
+        </div>
+        <div class="projects">
+            <button id="projectsBtn"><i class="fa-solid fa-list"></i>Projects</button>
+        </div>
+        <div class="toDos">
+            <button id="toDosBtn"><i class="fa-solid fa-check"></i>To-Do's</button>
+        </div>
+        <div class="categories">
+            <button id="categoriesBtn"><i class="fa-solid fa-hashtag"></i>Categories</button>
+        </div>
+    </div>
+    <div id="content">
+        <div class="titleDiv">
+            <p class="title">Projects</p>
+        </div>
+        <div class="container">
+            <div id="containerHeaderRow">
+                <div id="containerHeaderTitle">Title</div>
+                <div id="containerHeaderDesc">Description</div>
+                <div id="containerHeaderDueDate">Due Date</div>
+                <div id="containerHeaderPriority">Priority</div>
+                <div id="containerHeaderStatus">Status</div>
+            </div>
+            
+            <div class="item" id="#">
+                <div class="itemTitle">Groceries</div>
+                <div class="itemDesc">Buy Bananas, beef, lettuce,...</div>
+                <div class="dueDate">
+                    <input type="date" name="Due Date" id="due">
+                </div>
+                <div class="priority">Medium</div>
+                <div class="checkboxDiv">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+            </div>
+            <div class="item" id="#">
+                <div class="itemTitle">Household</div>
+                <div class="itemDesc">Make dishes, clean windows, walk dog,...</div>
+                <div class="dueDate">
+                    <input type="date" name="Due Date" id="due">
+                </div>
+                <div class="priority">High</div>
+                <div class="checkboxDiv">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+            <div class="item" id="#">
+                <div class="itemTitle">Cake</div>
+                <div class="itemDesc">Bake birthday cake</div>
+                <div class="dueDate">
+                    <input type="date" name="Due Date" id="due">
+                </div>
+                <div class="priority">High</div>
+                <div class="checkboxDiv">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

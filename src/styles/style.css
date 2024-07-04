@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    box-sizing: border-box;
+    --main-color: rgb(151, 191, 255);
+    --main-color-darker: rgb(120, 172, 255);
+    --font-color-menu: white;
+    --checkbox-checked-color: rgb(255, 132, 18);
+    --secondary-color: white;
+    --secondary-color-darker: rgb(242, 241, 241);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 50px 40px 40px 40px;
+    /* place-items: center; */
+    justify-content: left;
+    grid-column: 1;
+    background-color: var(--main-color);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+#menu>.dashboard {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px auto;
+    background-color: var(--main-color);
+    height: 50px;
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); */
+    border-bottom: 1px solid var(--font-color-menu);
+    z-index: 999;
+}
+
+#menu>.dashboard>#dash {
+    padding: 0px 6px;
+    font-weight: 600;
+    color: var(--font-color-menu);
+    font-size: 1.5rem;
+}
+
+#menu>div {
+    height: 40px;
+}
+
+#menu>div>button {
+    width: 200px;
+    text-align: left;
+    border: none;
+    height: 40px;
+    padding: 0px 6px;
+    background-color: var(--main-color);
+    color: var(--font-color-menu);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#menu>div>button:hover {
+    cursor: pointer;
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); */
+    background-color: var(--main-color-darker);
+}
+
+
+
+#menu>div>button>i {
+    margin-right: 5px;
+}
+
+
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px max-content;
+    grid-column: 2;
+    background-color: var(--main-color);
+    z-index: 1;
+    padding: 50px;
+    row-gap: 30px;
+}
+
+#content>* {
+    border-radius: 5px;
+}
+
+#content>.titleDiv {
+    background-color: white;
+    padding: 10px 0 10px 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: clamp(200px, 250px, 300px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+#content>.titleDiv>.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#content>.container {
+    background-color: white;
+    width: clamp(500px, 600px, 1fr);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+#content>.container>#containerHeaderRow,
+#content>.container>.item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr .5fr;
+    grid-template-rows: auto;
+    height: 54px;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+}
+
+#content>.container>#containerHeaderRow{
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    z-index: 600;
+}
+
+#content>.container>#containerHeaderRow:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#content>.container>.item{
+    z-index: 500;
+}
+
+#content>.container>.item:hover{
+    background-color: var(--secondary-color-darker);
+    cursor: pointer;
+    z-index: 400;
+}
+
+#content>.container>.item>.checkboxDiv>.fa-regular.fa-circle {
+    color: var(--checkbox-checked-color);
+}
+
+#content>.container>.item>.checkboxDiv>.fa-solid.fa-circle-check {
+    color: var(--checkbox-checked-color);
+}
+
+#content>.container>#containerHeaderRow>div:nth-child(1),
+#content>.container>.item>div:nth-child(1){
+    border-right: 1px solid var(--main-color);
+    padding: 0 15px 0 15px;
+}
+
+#content>.container>#containerHeaderRow>div:nth-child(2),
+#content>.container>.item>div:nth-child(2){
+    border-right: 1px solid var(--main-color);
+    padding: 0 15px 0 15px;
+}
+
+#content>.container>#containerHeaderRow>div:nth-child(3),
+#content>.container>.item>div:nth-child(3){
+    border-right: 1px solid var(--main-color);
+    padding: 0 15px 0 15px;
+}
+
+#content>.container>#containerHeaderRow>div:nth-child(4),
+#content>.container>.item>div:nth-child(4){
+    border-right: 1px solid var(--main-color);
+    padding: 0 15px 0 15px;
+}
+
+#content>.container>#containerHeaderRow>div:nth-child(5){
+    display: grid;
+    place-items: center;
+}
+
+#content>.container>.item:hover #due{
+    background-color: var(--secondary-color-darker);
+}
+
+#due{
+    border: none;
+}
+
+#content>.container>.item>.checkboxDiv{
+    display: grid;
+    place-items: center;
+}
