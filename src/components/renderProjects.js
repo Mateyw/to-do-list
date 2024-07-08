@@ -7,7 +7,7 @@ class Project {
     //         statusBtn.classList.add('fa-regular.fa-circle-check');
     //     });
     // }
-    
+
     renderStructure() {
         const contentEl = document.getElementById('content');
         const titleDiv = document.createElement('div');
@@ -51,12 +51,12 @@ class Project {
         const checkboxDiv = document.createElement('div');
         checkboxDiv.classList.add('checkboxDiv');
         const checkIcon = document.createElement('i');
-        checkIcon.classList.add('fa-regular'); 
-        checkIcon.classList.add('fa-circle'); 
+        checkIcon.classList.add('fa-regular');
+        checkIcon.classList.add('fa-circle');
         checkboxDiv.appendChild(checkIcon);
         const elements = [projectNameEl, projectDesc, checkboxDiv];
         elements.forEach(el => projectDiv.appendChild(el));
-        
+
 
         let defaultPrj = {
             projectDiv
@@ -67,7 +67,7 @@ class Project {
         projectsArray.forEach(prj => containerEl.append(prj));
 
 
-        
+
     }
 
     renderProjects() {
@@ -82,6 +82,45 @@ class Project {
         addProjectBtn.id = 'addProjectBtn';
         addProjectBtn.innerText = '+';
         newProjectDiv.appendChild(addProjectBtn);
+    }
+
+    renderNewProjects() {
+
+        let projectsArray = [];
+
+        document.addEventListener('click', (event) => {
+            if (event.target.id === 'addProjectBtn') {
+                const submitBtn = document.getElementById('submit');
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const inputProjectName = document.getElementById('projectName').value;
+                        const inputProjectDesc = document.getElementById('projectDesc').value;
+                        const inputProjectStatus = document.getElementById('projectStatus').checked;
+
+                        
+                        const projectDiv = document.createElement('div');
+                        projectDiv.classList.add('project');
+
+                        const elements = [inputProjectName, inputProjectDesc, inputProjectStatus];
+
+                        elements.forEach(el => projectDiv.append(el));
+
+                        let obj = {
+                            projectDiv
+                        };
+
+                        projectsArray.push(obj);
+
+                        projectsArray.forEach(prj => containerEl.append(prj.projectDiv));
+
+                        const formDiv = document.getElementById('formDiv');
+                        formDiv.remove();
+
+                    });
+                }
+            }
+        });
     }
 }
 

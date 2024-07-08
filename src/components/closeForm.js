@@ -1,16 +1,13 @@
-
-
 class Form {
     close() {
-        const formDiv = document.getElementById('formDiv');
-        const closeFormBtn = document.getElementById('closeFormBtn');
-        const body = document.querySelector('body');
-
-        if (formDiv) {
-            closeFormBtn.addEventListener('click', () => {
-                formDiv.innerHTML = ``;
-            });
-        }
+        document.addEventListener('click', (event) => {
+            const formDiv = document.getElementById('formDiv');
+            const closeFormBtn = document.getElementById('closeFormBtn');
+            
+            if (formDiv && closeFormBtn && event.target.id === 'closeFormBtn') {
+                formDiv.remove();
+            }
+        });
     }
 }
 

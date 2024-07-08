@@ -36,3 +36,6 @@ categoriesButtonForm.renderForm('addCategoryBtn');
 
 const form = new Form();
 form.close();
+
+const newCategory = new Categories();
+newCategory.renderNewCategory();

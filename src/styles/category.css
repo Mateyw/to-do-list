@@ -184,7 +184,7 @@ body {
 }
 
 #content>.container>.item{
-    z-index: 500;
+    z-index: 400;
     display: grid;
     justify-content: left;
     align-items: center;
@@ -197,6 +197,10 @@ body {
     background-color: var(--secondary-color-darker);
     cursor: pointer;
     z-index: 400;
+}
+
+#content>.container>.item:hover #categoryHeaderRow{
+    z-index: 600;
 }
 
 #content>.container>.item>.checkboxDiv>.fa-regular.fa-circle {

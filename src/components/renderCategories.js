@@ -25,7 +25,7 @@ class Categories {
         toDosEl.appendChild(toDosBtnEl);
         projectsEl.appendChild(projectsBtnEl);
         dashboardEl.appendChild(dashEl);
-        const elements =  [dashboardEl, projectsEl, toDosEl, categoriesEl];
+        const elements = [dashboardEl, projectsEl, toDosEl, categoriesEl];
         elements.forEach(el => menuEl.appendChild(el));
     }
 
@@ -54,7 +54,7 @@ class Categories {
         const containerEl = document.querySelector('.container');
         const fitnessEl = document.createElement('div');
         fitnessEl.classList.add('item');
-        fitnessEl.innerHTML = `<i class="fa-solid fa-dumbbell"></i><p class="categoryName">Fitness</p>`; 
+        fitnessEl.innerHTML = `<i class="fa-solid fa-dumbbell"></i><p class="categoryName">Fitness</p>`;
         const householdEl = document.createElement('div');
         householdEl.classList.add('item');
         householdEl.innerHTML = `<i class="fa-solid fa-house"></i><p class="categoryName">Household</p>`;
@@ -63,16 +63,17 @@ class Categories {
         workEl.innerHTML = `<i class="fa-solid fa-building"></i><p class="categoryName">Work</p>`;
         const vacationEl = document.createElement('div');
         vacationEl.classList.add('item');
-        vacationEl.innerHTML = `<i class="fa-solid fa-umbrella-beach"></i><p class="categoryName">Vacation</p>`;     
+        vacationEl.innerHTML = `<i class="fa-solid fa-umbrella-beach"></i><p class="categoryName">Vacation</p>`;
         const educationEl = document.createElement('div');
         educationEl.classList.add('item');
         educationEl.innerHTML = `<i class="fa-solid fa-book-bookmark"></i><p class="categoryName">Education</p>`;
         const healthEl = document.createElement('div');
         healthEl.classList.add('item');
-        healthEl.innerHTML = `<i class="fa-solid fa-notes-medical"></i><p class="categoryName">Health</p>`;   
+        healthEl.innerHTML = `<i class="fa-solid fa-notes-medical"></i><p class="categoryName">Health</p>`;
         const elements = [fitnessEl, householdEl, workEl, vacationEl, educationEl, healthEl];
         elements.forEach(el => containerEl.appendChild(el));
     }
+
 
     renderNewCategoryButton() {
         const newCategoryDiv = document.getElementById('newCategoryDiv');
@@ -81,6 +82,47 @@ class Categories {
         addCategoryBtn.innerText = '+';
         newCategoryDiv.appendChild(addCategoryBtn);
     }
+
+
+    renderNewCategory() {
+        let categoryArr = [];
+
+        const containerEl = document.querySelector('.container');
+
+        document.addEventListener('click', (event) => {
+            if (event.target.id === 'addCategoryBtn') {
+
+                const submitBtn = document.getElementById('submit');
+
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const inputCategory = document.getElementById('categoryName');
+
+                        let categoryValue = inputCategory.value;
+
+                        if (categoryValue) {
+
+                            const newCategory = document.createElement('div');
+                            newCategory.classList.add('item');
+                            newCategory.innerHTML = `<i class="fa-solid fa-circle"></i><p class="categoryName">${categoryValue}</p>`;
+
+
+                            categoryArr.push(newCategory);
+                        }
+
+                        categoryArr.forEach(category => containerEl.append(category));
+                        const formDiv = document.getElementById('formDiv');
+                        formDiv.remove();
+                    })
+                }
+            }
+        })
+
+
+
+    }
+
 }
 
 export default Categories;

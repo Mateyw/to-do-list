@@ -6,7 +6,7 @@ class ButtonForm {
         addButtonEl.addEventListener('click', () => {
 
             if (document.getElementById('formDiv')) {
-                return; 
+                return;
             }
 
             switch (addBtnId) {
@@ -36,9 +36,9 @@ class ButtonForm {
 
                     projectSubmitBtnEl.addEventListener('click', (event) => {
                         event.preventDefault();
-                        
 
-                        
+
+
                     });
                     break;
 
@@ -61,7 +61,7 @@ class ButtonForm {
                                 </div>
                                 <div class="priorityDiv">
                                     <label for="priorityFormEl">Priority</label>
-                                    <select name="priorityFormEl" class="priorityDropdown">
+                                    <select name="priorityFormEl" id="priorityDropdown">
                                         <option value="low">Low</option>
                                         <option value="medium">Medium</option>
                                         <option value="high">High</option>

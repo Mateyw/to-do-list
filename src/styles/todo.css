@@ -239,11 +239,11 @@ body {
     border: none;
 }
 
-#content>.container>.item:hover .priorityDropdown{
+#content>.container>.item:hover #priorityDropdown{
     background-color: var(--secondary-color-darker);
 }
 
-.priorityDropdown{
+#priorityDropdown{
     border: none;
 }
 
@@ -290,7 +290,7 @@ body {
 
 #formDiv>#form>div>input[type="text"],
 #formDiv>#form>div>input[type="date"],
-#formDiv>#form>div>.priorityDropdown{
+#formDiv>#form>div>#priorityDropdown{
     border: none;
     height: clamp(16px, 20px, 24px);
     background-color: var(--secondary-color);
@@ -299,7 +299,7 @@ body {
     padding: 2px 5px;
 }
 
-#formDiv>#form>div>.priorityDropdown{
+#formDiv>#form>div>#priorityDropdown{
     height: 24px;
 }
 
